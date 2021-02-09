@@ -8,7 +8,7 @@ before_install:
 install: 
 - pip install -r ../requirements.txt
 script: 
-- python manage.py test store
+- python manage.py test
 services:
   - postgresql
 addons:
@@ -21,3 +21,4 @@ before_script:
  - psql -c "create database decidedb owner decide"
  - psql -U postgres -c "ALTER USER decide CREATEDB"
  - python manage.py migrate
+if: branch = master 
