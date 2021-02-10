@@ -21,4 +21,10 @@ install:
 script: 
 - python manage.py test
 
+deploy:
+  provider: heroku
+  app: juanogtirprueba-0830
+  strategy: git
+  api_key: $HEROKU_AUTH_TOKEN
+
 if: branch = master 
