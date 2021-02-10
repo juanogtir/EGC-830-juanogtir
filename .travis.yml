@@ -14,7 +14,6 @@ before_script:
  - psql -c "create user decide with password 'decide'" 
  - psql -c "create database decidedb owner decide"
  - psql -U postgres -c "ALTER USER decide CREATEDB"
-
 before_install: 
 - cd decide
 install: 
